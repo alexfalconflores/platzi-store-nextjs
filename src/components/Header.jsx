@@ -1,11 +1,12 @@
 import React, { useState, useContext } from 'react';
-import '@styles/Header.scss';
 import Menu from '@components/Menu';
 import ShoppingCart from '@containers/ShoppingCart';
 import AppContext from '@context/AppContext';
+
 import menu from '@icons/icon_menu.svg';
 import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
+import styles from '@styles/Header.module.scss';
 
 const Header = () => {
     /* [1] Create a state variable called toggle and set it to false. */
@@ -21,7 +22,7 @@ const Header = () => {
     }
 
     return (
-        <nav>
+        <nav className={styles.Nav}>
             <img src={menu} alt="menu" className="menu" />
             <div className="navbar-left">
                 <img src={logo} alt="logo" className="nav-logo" />

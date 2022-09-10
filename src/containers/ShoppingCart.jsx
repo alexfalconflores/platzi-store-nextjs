@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import ShoppingCartItem from '../components/ShoppingCartItem';
+import ShoppingCartItem from '@components/ShoppingCartItem';
 import AppContext from '@context/AppContext';
-import '@styles/ShoppingCart.scss';
 
 import arrow from '@icons/flechita.svg';
+import styles from '@styles/ShoppingCart.module.scss';
 
 const ShoppingCart = () => {
     const { state: { cart } } = useContext(AppContext);
@@ -15,7 +15,7 @@ const ShoppingCart = () => {
     }
 
     return (
-        <aside className="ShoppingCart">
+        <aside className={styles.ShoppingCart}>
             <div className="title-container">
                 <img src={arrow} alt="arrow" />
                 <p className="title">Shopping cart</p>
