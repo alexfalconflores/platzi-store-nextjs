@@ -1,0 +1,45 @@
+@use 'vars';
+
+.MenuMobile {
+    /* display: flex; */
+    /* height: 95vh; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 24px;
+}
+
+.MenuMobile ul {
+    padding: 0;
+    margin: 24px 0 0 0;
+    list-style: none;
+}
+
+.MenuMobile ul:nth-child(1) {
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+.MenuMobile ul:last-child {
+    position: absolute;
+    bottom: 0;
+}
+
+.MenuMobile ul li {
+    margin-bottom: 24px;
+}
+
+.MenuMobile a {
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.MenuMobile .email {
+    font-size: var(--sm);
+    font-weight: 300;
+}
+
+.MenuMobile .sign-out {
+    font-size: var(--sm);
+    color: var(--hospital-green)
+}
