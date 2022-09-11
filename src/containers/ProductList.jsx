@@ -1,19 +1,19 @@
 import React from 'react';
-import ProductItem from '../components/ProductItem';
+import ProductItem from '@components/ProductItem';
 
 import useGetProducts from '@hooks/useGetProducts';
 
-const API = 'https://api.escuelajs.co/api/v1/products';
+import styles from '@styles/ProductList.module.scss';
 
-import '../styles/ProductList.scss';
+const API = 'https://api.escuelajs.co/api/v1/products';
 
 const ProductList = () => {
 	/* [1] Call the custom hook called useGetProducts */
 	const products = useGetProducts(API);
 
 	return (
-		<section className="ProductList-container">
-			<div className="ProductList">
+		<section className={styles['ProductList-container']}>
+			<div className={styles.ProductList}>
 				{/* [2] Loop through the products array and render a ProductItem component for each product. */}
 				{products.map(product => {
 					{/* React needs a key for each element that is rendered inside a map */ }
