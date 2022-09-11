@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Image from 'next/image';
 import ShoppingCartItem from '@components/ShoppingCartItem';
 import AppContext from '@context/AppContext';
 
@@ -17,7 +18,7 @@ const ShoppingCart = () => {
     return (
         <aside className={styles.ShoppingCart}>
             <div className={styles['title-container']}>
-                <img src={arrow} alt="arrow" />
+                <Image src={arrow} alt="arrow" />
                 <p className={styles.title}>Shopping cart</p>
             </div>
             <div className={styles['my-order-content']}>

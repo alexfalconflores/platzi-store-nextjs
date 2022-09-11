@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import Image from 'next/image';
 import Menu from '@components/Menu';
 import ShoppingCart from '@containers/ShoppingCart';
 import AppContext from '@context/AppContext';
@@ -23,9 +24,9 @@ const Header = () => {
 
     return (
         <nav className={styles.Nav}>
-            <img src={menu} alt="menu" className={styles.menu} />
+            <Image src={menu} alt="menu" className={styles.menu} />
             <div className={styles['navbar-left']}>
-                <img src={logo} alt="logo" className={styles['nav-logo']} />
+                <Image src={logo} alt="logo" className={styles['nav-logo']} />
                 <ul>
                     <li><a href="/">All</a></li>
                     <li><a href="/">Clothes</a></li>
@@ -41,7 +42,7 @@ const Header = () => {
                         mail@mail.com
                     </li>
                     <li className={styles['navbar-shopping-cart']} onClick={() => setToggleOrders(!toggleOrders)}>
-                        <img src={shoppingCart} alt="shopping cart" />
+                        <Image src={shoppingCart} alt="shopping cart" />
                         {cart.length > 0 && <div>{cart.length}</div>}
                     </li>
                 </ul>
