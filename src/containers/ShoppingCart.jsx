@@ -16,21 +16,21 @@ const ShoppingCart = () => {
 
     return (
         <aside className={styles.ShoppingCart}>
-            <div className="title-container">
+            <div className={styles['title-container']}>
                 <img src={arrow} alt="arrow" />
-                <p className="title">Shopping cart</p>
+                <p className={styles.title}>Shopping cart</p>
             </div>
-            <div className="my-order-content">
+            <div className={styles['my-order-content']}>
                 {/* {cart.map((product) => <ShoppingCartItem key={`orderItem-${product.id}`} product={product} />)} */}
                 {cart.map((product, index) => <ShoppingCartItem key={index} index={index} product={product} />)}
-                <div className='order-container'>
-                    <div className="order">
+                <div className={styles['order-container']}>
+                    <div className={styles.order}>
                         <p>
                             <span>Total</span>
                         </p>
                         <p>${sumTotal()}</p>
                     </div>
-                    <button className="primary-button">
+                    <button className={styles['primary-button']}>
                         Checkout
                     </button>
                 </div>

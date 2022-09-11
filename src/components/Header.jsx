@@ -23,9 +23,9 @@ const Header = () => {
 
     return (
         <nav className={styles.Nav}>
-            <img src={menu} alt="menu" className="menu" />
-            <div className="navbar-left">
-                <img src={logo} alt="logo" className="nav-logo" />
+            <img src={menu} alt="menu" className={styles.menu} />
+            <div className={styles['navbar-left']}>
+                <img src={logo} alt="logo" className={styles['nav-logo']} />
                 <ul>
                     <li><a href="/">All</a></li>
                     <li><a href="/">Clothes</a></li>
@@ -35,12 +35,12 @@ const Header = () => {
                     <li><a href="/">Others</a></li>
                 </ul>
             </div>
-            <div className="navbar-right">
+            <div className={styles['navbar-right']}>
                 <ul>
-                    <li className="navbar-email" onClick={handleToggle}>
+                    <li className={styles['navbar-email']} onClick={handleToggle}>
                         mail@mail.com
                     </li>
-                    <li className="navbar-shopping-cart" onClick={() => setToggleOrders(!toggleOrders)}>
+                    <li className={styles['navbar-shopping-cart']} onClick={() => setToggleOrders(!toggleOrders)}>
                         <img src={shoppingCart} alt="shopping cart" />
                         {cart.length > 0 && <div>{cart.length}</div>}
                     </li>
