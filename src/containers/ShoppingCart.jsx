@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import ShoppingCartItem from '@components/ShoppingCartItem';
 import AppContext from '@context/AppContext';
@@ -31,9 +32,9 @@ const ShoppingCart = () => {
                         </p>
                         <p>${sumTotal()}</p>
                     </div>
-                    <button className={styles['primary-button']}>
+                    <Link className={styles['primary-button']} href="/checkout">
                         Checkout
-                    </button>
+                    </Link>
                 </div>
             </div>
         </aside>

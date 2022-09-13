@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Image from 'next/image';
 import AppContext from '@context/AppContext';
 
 import close from '@icons/icon_close.png';
@@ -14,7 +15,7 @@ const OrderItem = ({ product }) => {
     return (
         <div className={styles.OrderItem}>
             <figure>
-                <img src={product?.images[0]} alt={product?.title} />
+                <Image src={product?.images[0]} alt={product?.title} />
                 {/* src="https://images.pexels.com/photos/6802843/pexels-photo-6802843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="bike"  */}
             </figure>
             {/* <p>Bike</p> */}
@@ -22,7 +23,7 @@ const OrderItem = ({ product }) => {
             {/* <p>$ 30.00</p> */}
             <p>${product?.price}</p>
             {/* <img src="./icons/icon_close.png" alt="close" /> */}
-            <img className={styles.pointer, styles['more-clickable-area']} src={close}/>
+            <Image className={styles.pointer, styles['more-clickable-area']} src={close}/>
         </div>
     );
 };

@@ -7,12 +7,13 @@
     padding: 0 24px;
     right: 0;
     box-sizing: border-box;
-    background-color: var($--white);
+    background-color: $--white;
     top: 60px;
     overflow-y: auto;
     border-radius: 6px;
-    border: 1px solid var($--very-light-pink);
+    border: 1px solid $--very-light-pink;
     animation: swipeLeft 0.26s ease;
+    color:$--black;
 }
 
 .title-container {
@@ -21,7 +22,7 @@
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: var($--white);
+    background-color: $--white;
 }
 
 .title-container img {
@@ -46,7 +47,7 @@
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
-    background-color: var($--white);
+    background-color: $--white;
 }
 
 .order {
@@ -54,7 +55,7 @@
     grid-template-columns: auto 1fr;
     gap: 16px;
     align-items: center;
-    background-color: var($--text-input-field);
+    background-color: $--text-input-field;
     margin-bottom: 24px;
     border-radius: 8px;
     padding: 0 24px;
@@ -67,7 +68,7 @@
 }
 
 .order span:nth-child(1) {
-    font-size: var($--md);
+    font-size: $--md;
 }
 
 
@@ -77,13 +78,13 @@
 }
 
 .primary-button {
-    background-color: var($--hospital-green);
+    background-color: $--hospital-green;
     border: none;
     border-radius: 8px;
-    color: var($--white);
+    color: $--white;
     width: 100%;
     cursor: pointer;
-    font-size: var($--md);
+    font-size: $--md;
     font-weight: bold;
     height: 50px;
 }

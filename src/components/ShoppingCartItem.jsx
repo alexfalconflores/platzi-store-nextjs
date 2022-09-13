@@ -16,10 +16,10 @@ const ShoppingCartItem = ({ product, index }) => {
     return (
         <div className={styles.ShoppingCartItem}>
             <figure>
-                <Image src={product.images[0]} alt={product.title} />
+                <Image src={product?.images[0]} alt={product?.title} width={70} height={70} />
             </figure>
-            <p>{product.title}</p>
-            <p>${product.price}</p>
+            <p>{product?.title}</p>
+            <p>${product?.price}</p>
             <Image src={close} alt="close" onClick={() => handleRemove(product)} />
         </div>
     );

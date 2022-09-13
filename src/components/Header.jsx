@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import Menu from '@components/Menu';
 import ShoppingCart from '@containers/ShoppingCart';
@@ -16,24 +17,40 @@ const Header = () => {
     /*  Define a context variable called appContext */
     /* Destructuring the appContext */
     /* Rename state with its cart property to cart */
-    const { state: { cart } } = useContext(AppContext);
+    const {
+        state: { cart },
+    } = useContext(AppContext);
     /* [2] Create a function called handleToggle that will toggle the state of toggle. */
     const handleToggle = () => {
         setToggle(!toggle);
-    }
+    };
 
     return (
         <nav className={styles.Nav}>
             <Image src={menu} alt="menu" className={styles.menu} />
             <div className={styles['navbar-left']}>
-                <Image src={logo} alt="logo" className={styles['nav-logo']} />
+                <Link href="/">
+                    <Image src={logo} alt="logo" className={styles['nav-logo']} />
+                </Link>
                 <ul>
-                    <li><a href="/">All</a></li>
-                    <li><a href="/">Clothes</a></li>
-                    <li><a href="/">Electronics</a></li>
-                    <li><a href="/">Furnitures</a></li>
-                    <li><a href="/">Toys</a></li>
-                    <li><a href="/">Others</a></li>
+                    <li>
+                        <a href="/">All</a>
+                    </li>
+                    <li>
+                        <a href="/">Clothes</a>
+                    </li>
+                    <li>
+                        <a href="/">Electronics</a>
+                    </li>
+                    <li>
+                        <a href="/">Furnitures</a>
+                    </li>
+                    <li>
+                        <a href="/">Toys</a>
+                    </li>
+                    <li>
+                        <a href="/">Others</a>
+                    </li>
                 </ul>
             </div>
             <div className={styles['navbar-right']}>
@@ -52,6 +69,6 @@ const Header = () => {
             {toggleOrders && <ShoppingCart />}
         </nav>
     );
-}
+};
 
 export default Header;
