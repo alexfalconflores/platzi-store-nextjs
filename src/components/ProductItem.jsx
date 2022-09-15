@@ -17,7 +17,7 @@ const ProductItem = ({ product }) => {
     return (
         <div className={styles.ProductItem}>
             {/* [2] Render the product image in this case the first image */}
-            <Image className={styles['ProductItem-img']} src={product?.images[0]} alt={product.title} width={240} height={240} />
+            <Image className={styles['ProductItem-img']} src={"/${product?.images[0]}"} alt={product.title} width={240} height={240} />
             <div className={styles['product-info']}>
                 <div>
                     {/* [3] Render the product title and product price */}

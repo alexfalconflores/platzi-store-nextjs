@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 /* [1] Create a custom hook called useGetProducts that takes an api url as a parameter and return products state */
 const useGetProducts = (API) => {
@@ -10,7 +10,10 @@ const useGetProducts = (API) => {
         const response = await fetch(API);
         const data = await response.json();
         setProducts(data);
-    }
+        // setProducts(response.data.filter((product) => {
+        //     return product.id < 200;
+        // }));
+    };
     /* [4] Call the getProducts function in the useEffect hook for the initial charge. */
     useEffect(() => {
         getProducts();
