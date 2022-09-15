@@ -11,7 +11,7 @@ const ShoppingCartItem = ({ product, index }) => {
     //Enviamos el index por ahora.
     const handleRemove = (item) => {
         removeFromCart(item, index);
-    }
+    };
 
     return (
         <div className={styles.ShoppingCartItem}>
@@ -23,6 +23,6 @@ const ShoppingCartItem = ({ product, index }) => {
             <Image src={close} alt="close" onClick={() => handleRemove(product)} />
         </div>
     );
-}
+};
 
 export default ShoppingCartItem;

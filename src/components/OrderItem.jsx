@@ -1,16 +1,16 @@
-import React, { useContext } from 'react';
+// import React, { useContext } from 'react';
 import Image from 'next/image';
-import AppContext from '@context/AppContext';
+// import AppContext from '@context/AppContext';
 
 import close from '@icons/icon_close.png';
 import styles from '@styles/OrderItem.module.scss';
 
 const OrderItem = ({ product }) => {
-    const { removeFromCart } = useContext(AppContext);
+    // const { removeFromCart } = useContext(AppContext);
 
-    const handleRemove = (product) => {
-        removeFromCart(product);
-    };
+    // const handleRemove = (product) => {
+    //     removeFromCart(product);
+    // };
 
     return (
         <div className={styles.OrderItem}>
@@ -23,7 +23,7 @@ const OrderItem = ({ product }) => {
             {/* <p>$ 30.00</p> */}
             <p>${product?.price}</p>
             {/* <img src="./icons/icon_close.png" alt="close" /> */}
-            <Image className={styles.pointer, styles['more-clickable-area']} src={close}/>
+            <Image className={(styles.pointer, styles['more-clickable-area'])} src={close} alt="Delete" />
         </div>
     );
 };

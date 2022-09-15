@@ -6,18 +6,23 @@ const useGetProducts = (API) => {
     const [products, setProducts] = useState([]);
     /* [3] Create an arrow function called getProducts that makes a request to the api and
              sends the request to setProducts. */
-    const getProducts = async () => {
-        const response = await fetch(API);
-        const data = await response.json();
-        setProducts(data);
-        // setProducts(response.data.filter((product) => {
-        //     return product.id < 200;
-        // }));
-    };
+    // const getProducts = async () => {
+    //     const response = await fetch(API);
+    //     const data = await response.json();
+    //     setProducts(data);
+    //     // setProducts(response.data.filter((product) => {
+    //     //     return product.id < 200;
+    //     // }));
+    // };
     /* [4] Call the getProducts function in the useEffect hook for the initial charge. */
     useEffect(() => {
-        getProducts();
-    }, []);
+        async function fetchData() {
+            const response = await fetch(API);
+            setProducts(response.data);
+        }
+        fetchData();
+        // getProducts();
+    }, [API]);
 
     /* [5] Return the products state variable. */
     return products;

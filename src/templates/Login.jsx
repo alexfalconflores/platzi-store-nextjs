@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
-import '../styles/Login.scss';
+import Image from 'next/image';
+import Link from 'next/link';
 
 import logo from '@logos/logo_yard_sale.svg';
+import '../styles/Login.scss';
 
 const Login = () => {
     const form = useRef(null);
@@ -12,26 +14,32 @@ const Login = () => {
         const data = {
             username: formData.get('email'),
             password: formData.get('password'),
-        }
+        };
         console.log(data);
-    }
+    };
 
     return (
         <div className="Login">
             <div className="Login-container">
-                <img src={logo} alt="logo" className="logo" />
+                <Image src={logo} alt="logo" className="logo" />
                 <form action="/" className="form" ref={form}>
-                    <label htmlFor="email" className="label">Email Address</label>
+                    <label htmlFor="email" className="label">
+                        Email Address
+                    </label>
                     <input type="email" name="email" placeholder="mail@mail.com" className="input input-email" />
-                    <label htmlFor="password" className="label">Password</label>
+                    <label htmlFor="password" className="label">
+                        Password
+                    </label>
                     <input type="password" name="password" placeholder="*******" className="input input-password" />
-                    <button className="primary-button login-button" onClick={handleSubmit}>Log in</button>
-                    <a href="/">Forgot my password</a>
+                    <button className="primary-button login-button" onClick={handleSubmit}>
+                        Log in
+                    </button>
+                    <Link href="/">Forgot my password</Link>
                 </form>
                 <button className="secondary-button signup-button">Sign up</button>
             </div>
         </div>
     );
-}
+};
 
 export default Login;

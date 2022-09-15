@@ -8,11 +8,17 @@ const MyAccount = () => {
                 <h1 className="title">My account</h1>
                 <form action="/" className="form">
                     <div>
-                        <label htmlFor="name" className="label">Name</label>
+                        <label htmlFor="name" className="label">
+                            Name
+                        </label>
                         <p className="value">Alex Falcon</p>
-                        <label htmlFor="email" className="label">Email Address</label>
+                        <label htmlFor="email" className="label">
+                            Email Address
+                        </label>
                         <p className="value">mail@mail.com</p>
-                        <label htmlFor="new-password" className="label">Password</label>
+                        <label htmlFor="new-password" className="label">
+                            Password
+                        </label>
                         <p className="value">*********</p>
                     </div>
                     <input type="submit" value="Edit" className="secondary-button login-button" />
@@ -20,6 +26,6 @@ const MyAccount = () => {
             </div>
         </div>
     );
-}
+};
 
 export default MyAccount;

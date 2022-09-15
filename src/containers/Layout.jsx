@@ -7,10 +7,10 @@ import Header from '@components/Header';
 const Layout = () => {
     return (
         <div className="Layout">
-            <Header/>
+            <Header />
             <Outlet />
         </div>
     );
-}
+};
 
 export default Layout;

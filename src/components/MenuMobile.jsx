@@ -1,28 +1,55 @@
 import React from 'react';
+import Link from 'next/link';
 import '../styles/MenuMobile.scss';
 
 const MenuMobile = () => {
     return (
         <div className="MenuMobile">
             <ul>
-                <li><a href="/">CATEGORIES</a></li>
-                <li><a href="/">All</a></li>
-                <li><a href="/">CLOTHES</a></li>
-                <li><a href="/">Electronics</a></li>
-                <li><a href="/">Furnitures</a></li>
-                <li><a href="/">Toys</a></li>
-                <li><a href="/">Others</a></li>
+                <li>
+                    <Link href="/">CATEGORIES</Link>
+                </li>
+                <li>
+                    <Link href="/">All</Link>
+                </li>
+                <li>
+                    <Link href="/">CLOTHES</Link>
+                </li>
+                <li>
+                    <Link href="/">Electronics</Link>
+                </li>
+                <li>
+                    <Link href="/">Furniture</Link>
+                </li>
+                <li>
+                    <Link href="/">Toys</Link>
+                </li>
+                <li>
+                    <Link href="/">Others</Link>
+                </li>
             </ul>
             <ul>
-                <li><a href="/">My orders</a></li>
-                <li><a href="/">My account</a></li>
+                <li>
+                    <Link href="/">My orders</Link>
+                </li>
+                <li>
+                    <Link href="/">My account</Link>
+                </li>
             </ul>
             <ul>
-                <li><a href="/" className="email">mail@mail.com</a></li>
-                <li><a href="/" className="sign-out">Sign out</a></li>
+                <li>
+                    <Link href="/" className="email">
+                        mail@mail.com
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/" className="sign-out">
+                        Sign out
+                    </Link>
+                </li>
             </ul>
         </div>
     );
-}
+};
 
 export default MenuMobile;

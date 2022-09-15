@@ -13,7 +13,7 @@
     border-radius: 6px;
     border: 1px solid $--very-light-pink;
     animation: swipeLeft 0.26s ease;
-    color:$--black;
+    color: $--black;
 }
 
 .title-container {
@@ -71,7 +71,6 @@
     font-size: $--md;
 }
 
-
 .order p:nth-child(2) {
     text-align: end;
     font-weight: bold;
@@ -99,7 +98,7 @@
     }
 }
 
-@media(max-width:640px) {
+@media (max-width: 640px) {
     .ShoppingCart {
         width: 100%;
     }

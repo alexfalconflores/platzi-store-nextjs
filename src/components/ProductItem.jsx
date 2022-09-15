@@ -17,16 +17,18 @@ const ProductItem = ({ product }) => {
     return (
         <div className={styles.ProductItem}>
             {/* [2] Render the product image in this case the first image */}
-            <Image className={styles['ProductItem-img']} src={"/${product?.images[0]}"} alt={product.title} width={240} height={240} />
+            <Image className={styles['ProductItem-img']} src={product?.images[0]} alt={product.title} width={240} height={240} />
             <div className={styles['product-info']}>
                 <div>
                     {/* [3] Render the product title and product price */}
                     <p>${product?.price}</p>
                     <p>{product?.title}</p>
                 </div>
-                <figure onClick={() => handleClick(product)}>
-                    {state.cart.includes(product) ? <Image className={styles.disabled} src={addedToCartImage} alt="added to cart" /> : <Image src={addToCartImage} alt="add to cart" />}
-                </figure>
+                <button onClick={() => handleClick(product)}>
+                    <figure >
+                        {state.cart.includes(product) ? <Image className={styles.disabled} src={addedToCartImage} alt="added to cart" /> : <Image src={addToCartImage} alt="add to cart" />}
+                    </figure>
+                </button>
             </div>
         </div>
     );
