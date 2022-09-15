@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ShoppingCartItem from '@components/ShoppingCartItem';
 import AppContext from '@context/AppContext';
-
 import arrow from '@icons/flechita.svg';
 import styles from '@styles/ShoppingCart.module.scss';
 
