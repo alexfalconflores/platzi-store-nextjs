@@ -14,6 +14,7 @@
     border: 1px solid $--very-light-pink;
     animation: swipeLeft 0.26s ease;
     color: $--black;
+    z-index: 1;
 }
 
 .title-container {

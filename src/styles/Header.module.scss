@@ -1,6 +1,6 @@
 @import 'vars';
 
-.Nav {
+.nav {
     background-color: $--white;
     display: flex;
     justify-content: space-between;
@@ -9,6 +9,7 @@
     top: 0;
     padding: 0 24px;
     border-bottom: 1px solid $--very-light-pink;
+    z-index: 1;
 }
 
 .menu {
@@ -58,8 +59,21 @@
     margin-right: 12px;
 }
 
+.navbar-email > button {
+    color: $--very-light-pink;
+    position: relative;
+    background-color: transparent;
+    border: none;
+}
+
 .navbar-shopping-cart {
     position: relative;
+}
+
+.navbar-shopping-cart > button {
+    position: relative;
+    background-color: transparent;
+    border: none;
 }
 
 .navbar-shopping-cart div {

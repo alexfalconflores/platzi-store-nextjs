@@ -24,7 +24,7 @@ const ProductItem = ({ product }) => {
                     <p>${product?.price}</p>
                     <p>{product?.title}</p>
                 </div>
-                <button onClick={() => handleClick(product)}>
+                <button className={styles['custom-button']} onClick={() => handleClick(product)}>
                     <figure >
                         {state.cart.includes(product) ? <Image className={styles.disabled} src={addedToCartImage} alt="added to cart" /> : <Image src={addToCartImage} alt="add to cart" />}
                     </figure>
